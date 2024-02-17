@@ -1,5 +1,63 @@
 #map {
-    height: 50%;
-    width: 50%;
+    width: 738px;
+    height: 700px;
+    position: absolute;
+    right: 0px;
+}
+body {
+    background-color: #062345;
+    margin-top: 100px;
+}
+section {
+    padding-left: 58px;
+    padding-top: 90px;
+}
 
+.sheltertitle {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.locationAddress {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.yourLocation {
+    width: 20px;
+    height: 25px;
+    margin-right: 10px; /* Add margin to create space between the icon and the text */
+}
+
+.nameAddress {
+    padding-top: 12px;
+    width: 473px;
+    height: 36px;
+    color: #062345;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 22px;
+}
+
+/*styles the search input field*/
+.nameAddress form input {
+    /*set to none to remove any default styling*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 10px; 
+    color: #062345;
+    /*padding: topBtm leftRight;*/
 }

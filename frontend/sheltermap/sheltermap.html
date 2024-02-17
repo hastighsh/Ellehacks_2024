@@ -9,9 +9,31 @@
     async defer></script>
     <script src="sheltermap.js"></script>
     <link rel="stylesheet" href="sheltermap.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script> <!--Font Awesome CDN package that loads all the icons-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
+    </style>
 </head>
 <body>
+    <div id="navbar">
+    </div>
     <div id="map">
     </div>
-</body>
+    <section>
+        <h1 class="sheltertitle"><span style="color: #FFF" > Shelter. </span> Find your nearest resource hub.</h1>
+        <div class="locationAddress">
+            <svg class="yourLocation" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
+                <path d="M10 0C7.34875 0.00297771 4.80694 1.05753 2.93222 2.9323C1.0575 4.80706 0.00297764 7.34894 0 10.0003C0 14.0691 2.95375 17.448 6.0825 21.0243C7.0725 22.1568 8.0975 23.3281 9.01 24.5131C9.12677 24.6646 9.27675 24.7873 9.44838 24.8717C9.62002 24.9561 9.80873 25 10 25C10.1913 25 10.38 24.9561 10.5516 24.8717C10.7233 24.7873 10.8732 24.6646 10.99 24.5131C11.9025 23.3281 12.9275 22.1568 13.9175 21.0243C17.0462 17.448 20 14.0691 20 10.0003C19.997 7.34894 18.9425 4.80706 17.0678 2.9323C15.1931 1.05753 12.6513 0.00297771 10 0ZM10 13.7504C9.25832 13.7504 8.5333 13.5304 7.91661 13.1184C7.29993 12.7063 6.81928 12.1206 6.53545 11.4354C6.25162 10.7501 6.17736 9.9961 6.32205 9.26865C6.46675 8.5412 6.8239 7.873 7.34835 7.34854C7.8728 6.82408 8.54098 6.46692 9.26841 6.32222C9.99584 6.17752 10.7498 6.25179 11.4351 6.53562C12.1203 6.81946 12.706 7.30012 13.118 7.91682C13.5301 8.53352 13.75 9.25856 13.75 10.0003C13.75 10.9948 13.3549 11.9487 12.6517 12.652C11.9484 13.3553 10.9946 13.7504 10 13.7504Z" fill="white"/>
+            </svg>
+            <form>
+                <!--this is the search icon from Font Awesome-->
+                <!-- <i class="fas fa-search"></i> -->
+                <!--"input" tag makes the search bar take input, "placeholder" is temp what shows, "onkeyup" assigned the js function which is called everytime a key is released in the search bar-->
+                <!--ID: used by app.js though the parentheses of document.getElementById()-->
+                <input type="text" class="nameAddress" name="" id="search-item" placeholder="Enter a location" onkeyup="search()"> <!--this is the search bar, placeholder holds the words inside, onkeyup calls a js function-->
+            </form>
+            <!--<h2 class="nameAddress">4700 Keele St, Toronto, ON M3J 1P3</h2>-->
+        </div>
+    </section>
 </html>
