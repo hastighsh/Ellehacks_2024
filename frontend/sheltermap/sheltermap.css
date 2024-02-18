@@ -2,8 +2,9 @@
     width: 688px;
     height: 660px;
     position: absolute;
-    right: 50px;
+    right: 10px;
     bottom: 40px;
+    top:10%
 }
 
 html, body {

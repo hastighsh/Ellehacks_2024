@@ -35,8 +35,7 @@ section {
 }
 
 .yourLocation {
-    padding-top: 8px;
-    margin-top: 50px;
+    
     width: 20px;
     height: 25px;
     margin-right: 10px;
@@ -95,7 +94,7 @@ section {
 }
 
 .submitbtn {
-    margin-top: 50px;
+    margin-top: 140px;
     padding-top: 6px;
     padding-left: 19px;
     padding-right: 19px;
