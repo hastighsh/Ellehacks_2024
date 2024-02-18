@@ -5,6 +5,117 @@ html, body {
 }
 
 body {
-    background: linear-gradient(142deg, #062345 19%, #000 130.66%);
-    margin-top: 100px;
+    background: linear-gradient(180deg, #062345 16.7%, #000 139.36%);
+    margin-left: 50px;
 }
+
+section {
+    margin-left: 40px;
+    margin-top: 100px;
+    padding-top: 90px;
+}
+
+.logo {
+    width: 150px; /* Set the desired width */
+    height: auto;
+}
+
+
+.projectionstitle {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.locationAddress {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.yourLocation {
+    margin-top: 50px;
+    width: 20px;
+    height: 25px;
+    margin-right: 10px; /* Add margin to create space between the icon and the text */
+}
+
+.nameAddress {
+    margin-top: 50px;
+    padding-top: 12px;
+    width: 473px;
+    height: 36px;
+    color: #062345;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 22px;
+}
+
+/*styles the search input field*/
+.nameAddress form input {
+    /*set to none to remove any default styling*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 10px; 
+    color: #062345;
+    /*padding: topBtm leftRight;*/
+}
+
+.nameAddress::placeholder {
+    padding-left: 10px;
+}
+
+/* .navbar {
+    font-family: 'DM Sans';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    display: flex;
+    margin-top: 20px;
+    width: 250px;
+    height: 85px;
+    margin-left: 50px;
+}
+
+.navbar-pages {
+    margin-top: 45px;
+    display: flex;
+    gap: 50px;
+    /*lays them out in a row and gets rid of bullets*/
+    /*list-style: none;
+    width: 450px;
+    height: 20px;
+}
+
+.navbar-link {
+    color: white;
+    /*gets rid of underline*/
+    /*text-decoration: none;
+}
+
+.signoutbtn {
+    margin-right: 50px;
+    background-color: white ;
+    border-radius: 12px;
+    color: #062345;
+    width: 140px;
+    height: 30px; 
+    display:flex; 
+    justify-content: center;
+
+} */

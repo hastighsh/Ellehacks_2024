@@ -13,13 +13,22 @@ html, body {
 }
 
 body {
-    background: linear-gradient(142deg, #062345 19%, #000 130.66%);
-    margin-top: 100px;
-}
-section {
+    background: linear-gradient(180deg, #062345 16.7%, #000 139.36%);
+    margin-left: 50px;
     padding-left: 50px;
+}
+
+section {
+    margin-left: 40px;
+    margin-top: 100px;
     padding-top: 90px;
 }
+
+.logo {
+    width: 150px; /* Set the desired width */
+    height: auto;
+}
+
 
 .sheltertitle {
     width: 568px;
@@ -38,12 +47,14 @@ section {
 }
 
 .yourLocation {
+    margin-top: 50px;
     width: 20px;
     height: 25px;
     margin-right: 10px; /* Add margin to create space between the icon and the text */
 }
 
 .nameAddress {
+    margin-top: 50px;
     padding-top: 12px;
     width: 473px;
     height: 36px;
@@ -68,4 +79,8 @@ section {
     padding: 8px 10px; 
     color: #062345;
     /*padding: topBtm leftRight;*/
+}
+
+.nameAddress::placeholder {
+    padding-left: 10px;
 }
