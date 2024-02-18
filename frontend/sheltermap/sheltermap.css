@@ -56,7 +56,9 @@ section {
 
 .nameAddress {
     margin-top: 50px;
-    padding-top: 12px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-bottom: 6px;
     width: 473px;
     height: 36px;
     color: #062345;
@@ -66,24 +68,6 @@ section {
     font-weight: 400;
     line-height: normal;
     border-radius: 22px;
-}
-
-/*styles the search input field*/
-.nameAddress form input {
-    /*set to none to remove any default styling*/
-    border: none;
-    outline: none;
-    box-shadow: none;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 10px; 
-    color: #062345;
-    /*padding: topBtm leftRight;*/
-}
-
-.nameAddress::placeholder {
-    padding-left: 10px;
 }
 
 .overlay {
