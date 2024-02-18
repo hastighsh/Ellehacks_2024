@@ -15,9 +15,9 @@ html, body {
 body {
     background: linear-gradient(142deg, #062345 19%, #000 130.66%);
     margin-top: 100px;
+    margin-left: 50px;
 }
 section {
-    padding-left: 50px;
     padding-top: 90px;
 }
 
