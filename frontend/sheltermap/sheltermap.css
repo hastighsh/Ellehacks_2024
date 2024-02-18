@@ -15,7 +15,7 @@ html, body {
 body {
     background: linear-gradient(180deg, #062345 16.7%, #000 139.36%);
     margin-left: 50px;
-    padding-left: 50px;
+    padding-left: 100px;
 }
 
 section {
@@ -43,15 +43,15 @@ section {
 
 .locationAddress {
     padding-top: 8px;
-    display: flex; /* Use flexbox */
-    align-items: center; /* Align items vertically in the center */
+    display: flex; 
+    align-items: center; 
 }
 
 .yourLocation {
     margin-top: 50px;
     width: 20px;
     height: 25px;
-    margin-right: 10px; /* Add margin to create space between the icon and the text */
+    margin-right: 10px; 
 }
 
 .nameAddress {
@@ -70,6 +70,14 @@ section {
     border-radius: 22px;
 }
 
+.h2 product-list {
+    color: #062345;
+    font-size: 20px;
+    font-style: normal;
+    background-color: white;
+
+}
+
 .overlay {
     width: 568px;
     height: 80px;
@@ -79,21 +87,11 @@ section {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* position: absolute; */
-    /* top: 25%;
-    right: 55%;
-    left: 50%;
-    width: 35%; */
-    /* max-width: 50%;
-    max-height: 60%; */
-    /* height: 60%; */
+    
     flex-direction: column;
     color: #fff; 
     display: flex;
     animation: 1s ease-out 0s 1 slideInFromLeft; 
-    /* justify-content: center;
-    align-items: center;
-    text-align: center;     */
     font-family: 'Days One' ;
 }
 
@@ -104,7 +102,8 @@ section {
     100% {
       transform: translateX(0);
     }
-  }
+}
+
 @media (max-width: 767px) {
     .overlay{
         top: 65%;
@@ -112,6 +111,7 @@ section {
     }
     
 }
+
 @media (max-width: 1024px) {
     .overlay{
         top: 35%;

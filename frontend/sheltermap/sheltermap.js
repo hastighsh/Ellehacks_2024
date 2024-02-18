@@ -1,80 +1,159 @@
 let map;
+//array of states objects
+// let states = [
+//     {
+//         name: "ONTARIO",
+//         coordinates: {lat: 43.77408875774123, lng: -79.502254639768},
+//         markerSet: [
+//             {
+//                 coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
+//                 content: "Science Building"
+//             },
+//             {
+//                 coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
+//                 content: "Eng Building"
+//             }
+//         ]
+//     },
+//     {
+//         name: "OHIO",
+//         coordinates: {lat: 39.96569249273196, lng:-82.99793004540737},
+//         markerSet: [
+//             {
+//                 coordinates: {lat: 40.153913317596654, lng:-82.93956373739512},
+//                 content: "Westerville Community Centre"
+//             },
+//             {
+//                 coordinates: {lat:40.05938121035463, lng:-83.01646802739103},
+//                 content: "Whetstone Community Centre"
+//             }
+//         ]
+//     },
+//     {
+//         name: "CALIFORNIA",
+//         coordinates: {}
+//     },
+// ];
+
+//curr stateName
+let stateName = {
+    name: "ONTARIO",
+    coordinates: {lat: 43.77408875774123, lng: -79.502254639768},
+    markerSet: [
+        {
+            coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
+            content: "Science Building"
+        },
+        {
+            coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
+            content: "Eng Building"
+        }
+    ]
+}
 
 //array of markers
-let markers = [
-    {
-        coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
-        content: "Science Building"
-    },
-    {
-        coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
-        content: "Eng Building"
-    }
-]
+// let markers = [
+//     {
+//         coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
+//         content: "Science Building"
+//     },
+//     {
+//         coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
+//         content: "Eng Building"
+//     }
+// ]
 
+// let location = [
+//     {
+//         coordinates: {lat:36.48687066841065, lng:-119.70407049050165},
+//         name: "California"
+//     },
+//     {
+//         coordinates: {lat: 43.77408875774123, lng: -79.502254639768},
+//         name: "Ontario"
+//     }
+// ]
+
+const search = () => {
+    // document.getElementById("id name in html")
+    //.value takes the user input
+    const searchbox = document.getElementById("search-item").value.toUpperCase();
+    alert(searchbox);
+    const storeItems = [
+        {
+            name: "ONTARIO",
+            coordinates: {lat: 43.77408875774123, lng: -79.502254639768},
+            markerSet: [
+                {
+                    coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
+                    content: "Science Building"
+                },
+                {
+                    coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
+                    content: "Eng Building"
+                }
+            ]
+        },
+        {
+            name: "OHIO",
+            coordinates: {lat: 39.96569249273196, lng:-82.99793004540737},
+            markerSet: [
+                {
+                    coordinates: {lat: 40.153913317596654, lng:-82.93956373739512},
+                    content: "Westerville Community Centre"
+                },
+                {
+                    coordinates: {lat:40.05938121035463, lng:-83.01646802739103},
+                    content: "Whetstone Community Centre"
+                }
+            ]
+        },
+        {
+            name: "CALIFORNIA",
+            coordinates: {}
+        },
+    ];
+    
+    // storeitems represents the container holding all the product items
+    //const product = document.querySelectorAll(".product");
+    // product stores all the items with the class product
+    //const pname = storeitems.getElementsByTagName("h2");
+    // gets all the storeitems elements and pname holds all the h2 elements
+    for (var i = 0; i < storeItems.length; i++) {
+        // takes whatever iteration we are on's product and the name under h2 and [0] makes sure it's the first name element in case there are multiples
+        alert(storeItems.length);
+        if (storeItems.stateName[i] == searchbox) {
+            stateName = storeItems[i];
+            alert(stateName.name);
+            // // checked if match has a value
+            // let textvalue = match.textContent || match.innerHTML;
+            // // match.textContent retrieves the text content of the h2 element stores in match
+            // // if .textContent is not supported it falls on match.innerHTML
+            // if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+            //     // text content is made case insensitive and the searchbox value index in the text content is found if it exists it won't be -1
+            //     product[i].style.display = "";
+            //     // when set to an empty string, the product is displayed
+            // } else {
+            //     product[i].style.display = "none";
+            // }
+        }
+    }
+}
 
 // initialize map
 function initMap() {
     const options = {
         zoom: 15,
-        // coordinates
-        center: {lat: 43.77408875774123, lng: -79.502254639768}
+        center: stateName.coordinates
     }
-    // map
 
     map = new google.maps.Map (
         document.getElementById('map'),
         options
     )
 
-    //listen to map click
-    // google.maps.event.addListener(map, "click", function(event) {
-    //     //alert("aa")
-    //     addMarker({
-    //         coordinates: event.latLng
-    //     })
-    // })
-
-    // styling = 
-    //     `<div style="background-color:brown; 
-    //             padding: 10px; 
-    //             border-radius: 4px; 
-    //             border-color: orange">
-    //             <h4 style="color: white; 
-    //                 font-family: Roboto; 
-    //                 font-size: 20px;
-    //                 font-style: normal;
-    //                 font-weight: 400;
-    //                 line-height: normal;
-    //                 margin-top: 0;
-    //                 ">
-    //                 Location: Science Building
-    //             </h4>
-    //         </div>`
-    
-
-    //let marker = new google.maps.Marker({ 
-        position: //{lat:43.777714245931854, lng:-79.5025550471508},
-        map: //map,
-        //icon: "https://img.icons8.com/fluent/48/000000/marker-storm.png" https://icons8.com/icon/E9btaaI7vsaa/marker-storm
-      // })
-    
-    //array of markers
-    // let markers = [
-    //     {
-    //         coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
-    //         iconImage: "https://img.icons8.com/fluency/48/000000/marker-storm.png",
-    //         content: styling
-    //     },
-    //     {
-    //         coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
-    //         iconImage: "https://img.icons8.com/fluency/48/000000/marker-storm.png",
-    //         content: styling
-    //     }
-    // ]
-
-    for (let i=0; i < markers.length; i++) {
-        addMarker(markers[i])
+    for (let i=0; i < stateName.markerSet.length; i++) {
+        addMarker(stateName.markerSet[i])
     }
 }
 
@@ -97,10 +176,6 @@ function addMarker(prop) {
 
     })
 
-    //if(prop.iconImage) {
-        //marker.setIcon(prop.iconImage)
-    //}
-
     if(prop.content) {
         let info = new google.maps.InfoWindow({
             content: styling
@@ -111,6 +186,25 @@ function addMarker(prop) {
         })
     }
 }
+
+{/* <script>
+                    document.addEventListener('keypress', (event)=>{
+                 
+                      // event.keyCode or event.which  property will have the code of the pressed key
+                      let keyCode = event.keyCode ? event.keyCode : event.which;
+                 
+                      // 13 points the enter key
+                      if(keyCode === 13) {
+                        // call click function of the buttonn 
+                        `<div class="product-list" id="product-list">
+                        <h2>Ohio</h2>
+                        <h2>California</h2>
+                        </div>`
+                      }
+                        
+                    });
+                   
+                   </script> */}
 
 
 
