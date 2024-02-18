@@ -10,6 +10,8 @@ buttons.forEach(button => {
     if(newIndex>=slides.children.length) newIndex=0
     slides.children[newIndex].dataset.active=true
     delete activeSlides.dataset.active
-
+    var page=document.getElementById("pages");
+    console.log(page)
+    page.innerHTML=newIndex+1;
 })
 })

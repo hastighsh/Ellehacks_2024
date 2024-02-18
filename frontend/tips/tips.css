@@ -7,7 +7,7 @@ body  {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    background: url('images/electricity.gif') center center fixed;
+    background: url('../images/electricity.gif') center center fixed;
             /* Adjust background-size property as needed */
             background-size: cover; /* Options: auto, cover, contain, or specific values like 100% 100% */
 }
@@ -23,13 +23,13 @@ a{
     height: 60vw;
     position: relative;
     display: block;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 .slide{
     position: absolute;
     inset: 0;
     opacity: 0;
-    margin-left: 10%;
+    
     transition:200ms opacity ease-in-out;
     transition-delay: 200mms;
 }
@@ -40,8 +40,8 @@ a{
 }
 .slide > img {
     display: block;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    opacity: 0.8;
     object-fit: cover;
     object-position: center;
 }
@@ -51,7 +51,7 @@ a{
     background: none;
     border: none;
     font-size: 3rem;
-    top: 50%;
+    top: 15%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
@@ -67,7 +67,7 @@ a{
     left: 1rem;
 }
 .carousel-button.next {
-    right: 35%;
+    right: 1rem;
 }
 
 
