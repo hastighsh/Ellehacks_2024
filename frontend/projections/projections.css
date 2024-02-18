@@ -33,6 +33,7 @@ section {
 }
 
 .locationAddress {
+    padding-top: 8px;
     display: flex; /* Use flexbox */
     align-items: center; /* Align items vertically in the center */
 }
@@ -76,6 +77,55 @@ section {
     padding-left: 10px;
 }
 
+.overlay {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* position: absolute; */
+    /* top: 25%;
+    right: 55%;
+    left: 50%;
+    width: 35%; */
+    /* max-width: 50%;
+    max-height: 60%; */
+    /* height: 60%; */
+    flex-direction: column;
+    color: #fff; 
+    display: flex;
+    animation: 1s ease-out 0s 1 slideInFromLeft; 
+    /* justify-content: center;
+    align-items: center;
+    text-align: center;     */
+    font-family: 'Days One' ;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+@media (max-width: 767px) {
+    .overlay{
+        top: 65%;
+        max-height: 20%;
+    }
+    
+}
+@media (max-width: 1024px) {
+    .overlay{
+        top: 35%;
+    }
+   
+    
+}
 /* .navbar {
     font-family: 'DM Sans';
     position: relative;
