@@ -66,7 +66,7 @@ section {
     padding-left: 19px;
     padding-right: 19px;
     padding-bottom: 6px;
-    width: 250px;
+    width: 205px;
     height: 36px;
     color: #062345;
     font-family: "DM Sans";
@@ -83,7 +83,7 @@ section {
     padding-left: 19px;
     padding-right: 19px;
     padding-bottom: 6px;
-    width: 250px;
+    width: 205px;
     height: 36px;
     color: #062345;
     font-family: "DM Sans";
@@ -95,6 +95,7 @@ section {
 }
 
 .submitbtn {
+    
     margin-top: 50px;
     padding-top: 6px;
     padding-left: 19px;
@@ -104,27 +105,6 @@ section {
     color: #062345;
     background-color: #71A0D7;
 
-}
-/* span::after {
-    padding-left: 5px;
-}
-  
-input:invalid + span::after {
-    content:;
-}
-  
-input:valid + span::after {
-    content: "✓";
-} */
-
-input:invalid:focus::after {
-    color: lightblue; /* Change this color to whatever you prefer */
-    z-index: -1; /* Ensure the pseudo-element is behind the input */
-}
-
-/* Hide the browser default focus outline */
-input:valid:focus {
-    outline: none;
 }
 
 .overlay {
