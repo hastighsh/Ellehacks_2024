@@ -1,15 +1,16 @@
 #map {
-    width: 738px;
-    height: 700px;
+    width: 688px;
+    height: 660px;
     position: absolute;
-    right: 0px;
+    right: 50px;
+    bottom: 40px;
 }
 body {
     background-color: #062345;
     margin-top: 100px;
 }
 section {
-    padding-left: 58px;
+    padding-left: 50px;
     padding-top: 90px;
 }
 

@@ -1,80 +1,17 @@
 let map;
-let styling =
-    `<div>
-        <h4 style="color: #491600; 
-            font-family: Roboto; 
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            margin-top: 0;">
-            Location: Science Building
-        </h4>
-    </div>`;
 
 //array of markers
 let markers = [
     {
         coordinates: {lat:43.777714245931854, lng:-79.5025550471508},
-        iconImage: "https://img.icons8.com/fluency/48/000000/marker-storm.png",
-        content: styling
+        content: "Science Building"
     },
     {
         coordinates: {lat:43.77170263276005, lng:-79.50474372951118},
-        iconImage: "https://img.icons8.com/fluency/48/000000/marker-storm.png",
-        content: styling
+        content: "Eng Building"
     }
 ]
 
-// let products = [
-//     { imgSrc: 'img/b1.png', name: 'Benefit Cosmetics - Hoola Bronzer', price: '$47.00' },
-//     { imgSrc: 'img/b2.png', name: 'Too Faced - Chocolate Soleil Matte Bronzer', price: '$48.50' },
-//     { imgSrc: 'img/b3.png', name: 'Rare Beauty by Selena Gomez - Warm Wishes Effortless Bronzer Sticks', price: '$34.00' },
-//     { imgSrc: 'img/c1.png', name: 'NARS - Radiant Creamy Concealer', price: '$42.00' },
-//     { imgSrc: 'img/c2.png', name: 'Dior - Backstage Concealer', price: '$38.00' },
-//     { imgSrc: 'img/g1.png', name: 'Dior - Lip Glow Oil', price: '$50.00' },
-//     { imgSrc: 'img/g2.png', name: 'Summer Fridays - Lip Butter Balm', price: '$31.00' },
-//     { imgSrc: 'img/g3.png', name: 'fresh - Sugar Lip Balm Hydrating Treatment', price: '$33.00' },
-//     { imgSrc: 'img/m1.png', name: 'Drunk Elephant - Protini Polypeptide Firming Refillable Moisturizer', price: '$89.00' },
-//     { imgSrc: 'img/m2.png', name: 'Tatcha - The Dewy Skin Cream Plumping and Hydrating Moisturizer', price: '$97.00' },
-//     { imgSrc: 'img/m3.png', name: 'Glow Recipe - Plum Plump Refillable Hyaluronic Acid Moisturizer', price: '$52.00' }
-// ];
-
-// // Get the product list container
-// const productList = document.getElementById('product-list');
-
-// // Loop through the products array and generate HTML for each product
-// for (let i = 0; i < products.length; i++) {
-//     const product = products[i];
-
-//     // Create a new div element for the product
-//     const productDiv = document.createElement('div');
-//     productDiv.classList.add('product');
-
-//     // Create an image element for the product
-//     const img = document.createElement('img');
-//     img.src = product.imgSrc;
-//     img.alt = '';
-
-//     // Create a div element for the product details
-//     const detailsDiv = document.createElement('div');
-//     detailsDiv.classList.add('p-details');
-
-//     // Create h2 and h3 elements for the product name and price
-//     const nameHeading = document.createElement('h2');
-//     nameHeading.textContent = product.name;
-//     const priceHeading = document.createElement('h3');
-//     priceHeading.textContent = product.price;
-
-//     // Append the image and details to the product div
-//     detailsDiv.appendChild(nameHeading);
-//     detailsDiv.appendChild(priceHeading);
-//     productDiv.appendChild(img);
-//     productDiv.appendChild(detailsDiv);
-
-//     // Append the product div to the product list container
-//     productList.appendChild(productDiv);
-// }
 
 // initialize map
 function initMap() {
@@ -142,10 +79,21 @@ function initMap() {
 }
 
 function addMarker(prop) {
+    let styling = `<div>
+        <h4 style="color: #491600; 
+            font-family: Roboto; 
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-top: 0;">
+            Location: ${prop.content}
+        </h4>
+         </div>`;
     let marker = new google.maps.Marker({ 
         position: prop.coordinates,
         map: map,
-        icon: prop.iconImage
+        icon: "https://img.icons8.com/fluency/48/000000/marker-storm.png"
 
     })
 
@@ -155,7 +103,7 @@ function addMarker(prop) {
 
     if(prop.content) {
         let info = new google.maps.InfoWindow({
-            content: prop.content
+            content: styling
         })
 
         marker.addListener("click", function() {
@@ -397,3 +345,53 @@ function addMarker(prop) {
 //     font-size: 18px;
 //     font-weight: 600;
 // }
+
+// let products = [
+    //     { imgSrc: 'img/b1.png', name: 'Benefit Cosmetics - Hoola Bronzer', price: '$47.00' },
+    //     { imgSrc: 'img/b2.png', name: 'Too Faced - Chocolate Soleil Matte Bronzer', price: '$48.50' },
+    //     { imgSrc: 'img/b3.png', name: 'Rare Beauty by Selena Gomez - Warm Wishes Effortless Bronzer Sticks', price: '$34.00' },
+    //     { imgSrc: 'img/c1.png', name: 'NARS - Radiant Creamy Concealer', price: '$42.00' },
+    //     { imgSrc: 'img/c2.png', name: 'Dior - Backstage Concealer', price: '$38.00' },
+    //     { imgSrc: 'img/g1.png', name: 'Dior - Lip Glow Oil', price: '$50.00' },
+    //     { imgSrc: 'img/g2.png', name: 'Summer Fridays - Lip Butter Balm', price: '$31.00' },
+    //     { imgSrc: 'img/g3.png', name: 'fresh - Sugar Lip Balm Hydrating Treatment', price: '$33.00' },
+    //     { imgSrc: 'img/m1.png', name: 'Drunk Elephant - Protini Polypeptide Firming Refillable Moisturizer', price: '$89.00' },
+    //     { imgSrc: 'img/m2.png', name: 'Tatcha - The Dewy Skin Cream Plumping and Hydrating Moisturizer', price: '$97.00' },
+    //     { imgSrc: 'img/m3.png', name: 'Glow Recipe - Plum Plump Refillable Hyaluronic Acid Moisturizer', price: '$52.00' }
+    // ];
+    
+    // // Get the product list container
+    // const productList = document.getElementById('product-list');
+    
+    // // Loop through the products array and generate HTML for each product
+    // for (let i = 0; i < products.length; i++) {
+    //     const product = products[i];
+    
+    //     // Create a new div element for the product
+    //     const productDiv = document.createElement('div');
+    //     productDiv.classList.add('product');
+    
+    //     // Create an image element for the product
+    //     const img = document.createElement('img');
+    //     img.src = product.imgSrc;
+    //     img.alt = '';
+    
+    //     // Create a div element for the product details
+    //     const detailsDiv = document.createElement('div');
+    //     detailsDiv.classList.add('p-details');
+    
+    //     // Create h2 and h3 elements for the product name and price
+    //     const nameHeading = document.createElement('h2');
+    //     nameHeading.textContent = product.name;
+    //     const priceHeading = document.createElement('h3');
+    //     priceHeading.textContent = product.price;
+    
+    //     // Append the image and details to the product div
+    //     detailsDiv.appendChild(nameHeading);
+    //     detailsDiv.appendChild(priceHeading);
+    //     productDiv.appendChild(img);
+    //     productDiv.appendChild(detailsDiv);
+    
+    //     // Append the product div to the product list container
+    //     productList.appendChild(productDiv);
+    // }
