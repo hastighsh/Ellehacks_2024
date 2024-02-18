@@ -489,3 +489,98 @@ function addMarker(prop) {
     //     // Append the product div to the product list container
     //     productList.appendChild(productDiv);
     // }
+
+    // <div class="row" style="margin-left: 1%; overflow: hidden; z-index: 1">
+    //     <!-- Logo on the left-most corner -->  
+    //     <div class="col-md-2" style="position: relative; transform-origin: 0 0">
+    //         <img src="../images/logo.png" class="logo">
+    //     </div>
+          
+    
+    //     <!-- Navigation -->
+    //     <div class="col-md-7" style="margin: 0%;padding: 0%;">
+    //         <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end" style="background-color: #0c0d0f !important" >
+    //             <ul class="navbar-nav">
+    //                 <li class="nav-item">
+    //                     <a class="nav-link" href="../../index.html">HOME</a>
+    //                 </li>
+    //                 <li class="nav-item">
+    //                     <a class="nav-link" href="#">PROJECTIONS</a>
+    //                 </li>
+    //                 <li class="nav-item">
+    //                     <a class="nav-link" href="#">SHELTER MAPS</a>
+    //                 </li>
+    //                 <li class="nav-item active">
+    //                     <a class="nav-link" href="tips.html">TIPS</a>
+    //                 </li>
+    //             </ul>
+    //         </nav>
+    //     </div>
+    //     <div class="col-md-3" style="padding-top: 1.3%; background-color:#0c0d0f;font-family: 'DM Sans'; color: white; width: 50%;">
+
+    //     <div style="background-color: white ;border-radius: 12px;color: rgb(6, 6, 6);width: 50%; display:flex; justify-content: center;">SIGN OUT</div>
+    //   </div>
+    // </div>
+
+//     <div class="overlay" id="myOverlay">
+//     <h1><span>Empower Your Readiness <br></span></h1>
+//     <h4>A Comprehensive Guide to Preparing for Power Outages</h4>
+// </div>
+
+// .overlay {
+//     position: absolute;
+//     top: 25%;
+//     right: 55%;
+//     left: 50%;
+//     width: 35%;
+//     max-width: 50%;
+//     max-height: 60%;
+//     height: 60%;
+//     flex-direction: column;
+//     background-color: rgba(0, 0, 0, 0.5); 
+//     color: #fff; 
+//     display: flex;
+//     animation: 1s ease-out 0s 1 slideInFromLeft; 
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;    
+//     font-family: 'Days One' ;
+// }
+
+// @keyframes slideInFromLeft {
+//     0% {
+//       transform: translateX(-100%);
+//     }
+//     100% {
+//       transform: translateX(0);
+//     }
+//   }
+// @media (max-width: 767px) {
+//     .overlay{
+//         top: 65%;
+//         max-height: 20%;
+//     }
+//     .overlay h1 {
+//         font-size: .9em; /* Adjust the font size for h1 on smaller screens */
+//     }
+
+//     .overlay h4 {
+//         font-size: .5em; /* Adjust the font size for h2 on smaller screens */
+//     }
+    
+// }
+// @media (max-width: 1024px) {
+//     .overlay{
+//         top: 35%;
+        
+//     }
+//     .overlay h1 {
+//         font-size: 1.9em; /* Adjust the font size for h1 on smaller screens */
+//     }
+
+//     .overlay h4 {
+//         font-size: 1.5em; /* Adjust the font size for h2 on smaller screens */
+//     }
+   
+    
+// }

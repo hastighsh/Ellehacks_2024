@@ -1,3 +1,44 @@
+let chosenState;
+const search = () => {
+    // document.getElementById("id name in html")
+    //.value takes the user input
+    const searchbox = document.getElementById("search-item").value.toUpperCase();
+    alert(searchbox);
+    const storeItems = [
+        "OHIO", "CALIFORNIA"
+    ];
+    
+    // storeitems represents the container holding all the product items
+    //const product = document.querySelectorAll(".product");
+    // product stores all the items with the class product
+    //const pname = storeitems.getElementsByTagName("h2");
+    // gets all the storeitems elements and pname holds all the h2 elements
+    for (var i = 0; i < storeItems.length; i++) {
+        // takes whatever iteration we are on's product and the name under h2 and [0] makes sure it's the first name element in case there are multiples
+        alert(storeItems.length);
+        if (storeItems[i] == searchbox) {
+            chosenState = storeItems[i];
+            alert(chosenState);
+            // // checked if match has a value
+            // let textvalue = match.textContent || match.innerHTML;
+            // // match.textContent retrieves the text content of the h2 element stores in match
+            // // if .textContent is not supported it falls on match.innerHTML
+            // if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+            //     // text content is made case insensitive and the searchbox value index in the text content is found if it exists it won't be -1
+            //     product[i].style.display = "";
+            //     // when set to an empty string, the product is displayed
+            // } else {
+            //     product[i].style.display = "none";
+            // }
+        }
+    }
+}
+
+
+
+
+
+
 // <!-- Navigation -->
 //         <div class="col-md-7" style="margin: 0%;padding: 0%;">
 //             <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end" style="background-color: #0c0d0f !important" >
