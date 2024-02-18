@@ -68,6 +68,13 @@
                 <!--ID: used by app.js though the parentheses of document.getElementById()-->
                 <input type="text" class="nameAddress" name="" id="search-item" placeholder="Enter a location"> <!--this is the search bar, placeholder holds the words inside, onkeyup calls a js function-->
             </form>
+            <script>document.getElementById("search-item").addEventListener("keydown", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    initMap();
+                    search();
+                }
+            });</script>
             <!--<h2 class="nameAddress">4700 Keele St, Toronto, ON M3J 1P3</h2>-->
         </div>
     </section>
