@@ -5,8 +5,15 @@
     right: 50px;
     bottom: 40px;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #062345;
+    background: linear-gradient(142deg, #062345 19%, #000 130.66%);
     margin-top: 100px;
 }
 section {
