@@ -16,7 +16,7 @@ function todarkmode(){
     var navbar=document.getElementById("navbar")
     navbar.style.backgroundColor="#0c0d0f";
     var logo=document.getElementsByClassName("logo")
-    logo[0].src="../images/logo.png"
+    logo[0].src="/frontend/images/logo.png"
     var navbar2 = document.getElementById("myNavbar");
     setTimeout(function(){
        
