@@ -1,0 +1,130 @@
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body  {
+    background-color: #0c0d0f !important; 
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: url('images/electricity.gif') center center fixed;
+            /* Adjust background-size property as needed */
+            background-size: cover; /* Options: auto, cover, contain, or specific values like 100% 100% */
+}
+a{
+    font-family: 'DM Sans';
+}
+.logo{
+    width: 150px; /* Set the desired width */
+    height: auto;
+}
+.carousel{
+    width: 60vw;
+    height: 60vw;
+    position: relative;
+    display: block;
+    margin-left: 30%;
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin-left: 10%;
+    transition:200ms opacity ease-in-out;
+    transition-delay: 200mms;
+}
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+.slide > img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0.5 0.5 0 0 rem;
+    background-color: rgba(0,0,0,.1);
+}
+.carousel-button:hover {
+    color: rgb(250, 250, 250);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-button.prev {
+    left: 1rem;
+}
+.carousel-button.next {
+    right: 35%;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 25%;
+    right: 55%;
+    left: 50%;
+    width: 35%;
+    max-width: 50%;
+    max-height: 60%;
+    height: 60%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    display: flex;
+    animation: 1s ease-out 0s 1 slideInFromLeft; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    font-family: 'Days One' ;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+@media (max-width: 767px) {
+    .overlay{
+        top: 65%;
+        max-height: 20%;
+    }
+    .overlay h1 {
+        font-size: .9em; /* Adjust the font size for h1 on smaller screens */
+    }
+
+    .overlay h4 {
+        font-size: .5em; /* Adjust the font size for h2 on smaller screens */
+    }
+    
+}
+@media (max-width: 1024px) {
+    .overlay{
+        top: 35%;
+        
+    }
+    .overlay h1 {
+        font-size: 1.9em; /* Adjust the font size for h1 on smaller screens */
+    }
+
+    .overlay h4 {
+        font-size: 1.5em; /* Adjust the font size for h2 on smaller screens */
+    }
+   
+    
+}
