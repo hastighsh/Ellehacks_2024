@@ -27,7 +27,18 @@ section {
     font-weight: 400;
     line-height: normal;
 }
-
+#Projection{
+    position:absolute;
+    top: 320px;
+    left: 624px;
+    padding: 5%;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 30px;
+    font-style: normal;
+    
+    line-height: normal;
+}
 .locationAddress {
     padding-top: 8px;
     display: flex;

@@ -3,7 +3,7 @@ const search = () => {
     // document.getElementById("id name in html")
     //.value takes the user input
     const searchbox = document.getElementById("search-item").value.toUpperCase();
-    alert(searchbox);
+   
     const storeItems = [
         "OHIO", "CALIFORNIA"
     ];
@@ -15,10 +15,10 @@ const search = () => {
     // gets all the storeitems elements and pname holds all the h2 elements
     for (var i = 0; i < storeItems.length; i++) {
         // takes whatever iteration we are on's product and the name under h2 and [0] makes sure it's the first name element in case there are multiples
-        alert(storeItems.length);
+      
         if (storeItems[i] == searchbox) {
             chosenState = storeItems[i];
-            alert(chosenState);
+        
             // // checked if match has a value
             // let textvalue = match.textContent || match.innerHTML;
             // // match.textContent retrieves the text content of the h2 element stores in match
@@ -34,7 +34,11 @@ const search = () => {
     }
 }
 
+function change_projection(){
 
+var project=document.getElementById("Projection");
+project.innerHTML= "There is a chance of outtage 2 days out of 30 days in the area"
+}
 
 
 
